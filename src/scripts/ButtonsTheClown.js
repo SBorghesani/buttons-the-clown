@@ -1,4 +1,5 @@
 import { ReservationForm } from "./ReservationForm.js"
+import { Reservations } from "./Reservations.js"
 
 
 export const ButtonsTheClown = () => {
@@ -10,7 +11,7 @@ export const ButtonsTheClown = () => {
 
     <section class="reservations">
     <h2>Reservations</h2>
-    ${""}
+    ${Reservations()}
     </section>
     `
 }

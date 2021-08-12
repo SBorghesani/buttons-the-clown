@@ -1,6 +1,32 @@
-
+import { sendRequest } from "./dataAccess.js"
 
 const mainContainer = document.querySelector("#container")
+
+mainContainer.addEventListener(
+    "click",
+    clickEvent => {
+        if (clickEvent.target.id === "submitReservationRequest") {
+            const UserParentName = document.querySelector("input[name='parentName']").value
+            const UserChildName = document.querySelector("input[name='childName']").value
+            const UserChildCount = document.querySelector("input[name='childCount']").value
+            const UserAddress = document.querySelector("input[name='address']").value
+            const UserDuration = document.querySelector("input[name='duration']").value
+            const UserRequestedDate = document.querySelector("input[name='requestedDate']").value
+
+            const dataToSendToAPI = {
+                parentName: UserParentName,
+                childName: UserChildName,
+                childCount: UserChildCount,
+                address: UserAddress,
+                duration: UserDuration,
+                requestedDate: UserRequestedDate
+            }
+            sendRequest(dataToSendToAPI)
+        }
+    }
+)
+
+
 
 export const ReservationForm = () => {
     let html = `

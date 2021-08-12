@@ -1,5 +1,42 @@
 {
-    "clowns": [],
-    "acceptedReservations": [],
-    "reservations": []
+  "clowns": [
+      {
+          "id": 1,
+          "name": "Buttons"
+      },
+      {
+          "id": 2,
+          "name": "Lollipop"
+      }
+  ],
+  "acceptedReservations": [],
+  "reservations": [
+    {
+      "parentName": "Stefan",
+      "childName": "Stefan jr",
+      "childCount": "3",
+      "address": "whatever",
+      "duration": "2",
+      "requestedDate": "2021-08-14",
+      "id": 1
+    },
+    {
+      "parentName": "Something",
+      "childName": "Whatever",
+      "childCount": "6",
+      "address": "I dont know",
+      "duration": "4",
+      "requestedDate": "2021-10-13",
+      "id": 2
+    },
+    {
+      "parentName": "Test",
+      "childName": "Test jr",
+      "childCount": "3",
+      "address": "sdifja",
+      "duration": "4",
+      "requestedDate": "2021-08-12",
+      "id": 3
+    }
+  ]
 }
