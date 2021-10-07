@@ -1,5 +1,5 @@
-import { getRequests, deleteRequest, getClowns } from "./dataAccess.js"
-
+import { getRequests, deleteRequest, } from "./dataAccess.js"
+import { Clowns } from "./Clowns.js"
 const mainContainer = document.querySelector("#container")
 
 mainContainer.addEventListener(
@@ -12,7 +12,6 @@ mainContainer.addEventListener(
     }
 )
 
-const clowns = getClowns()
 // const ClownOptions = () => {
     //      `
     //     <select class="clowns" id="clowns">
@@ -31,7 +30,7 @@ const clowns = getClowns()
                     return `
                     
                     
-        <li>
+                    <li>
         ${request.parentName} has reserved ${request.requestedDate} for ${request.childName} and 
         ${parseInt(request.childCount) -1} friends.
         
@@ -40,16 +39,7 @@ const clowns = getClowns()
         Deny
         </button>
         </li>
-        <select class="clowns" id="clowns">
-        <option value="">Choose</option>
-        ${
-            clowns.map(
-                clown => {
-                    return `<option value="${clown.id}--${request.id}">${clown.name}</option>`
-                }
-            ).join("")
-        }
-    </select>
+        ${Clowns()}
         `
         
 }
